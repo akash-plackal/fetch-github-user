@@ -9,7 +9,7 @@ const Card = ({ user }) => {
   return (
     <div className="">
       <div className='w-4/12 m-auto flex align-center flex-col pt-5'>
-        <img src={user?.avatar_url} alt="user image" className=" m-auto w-11/12 object-cover object-center rounded-lg shadow-md" />
+        <img src={user?.avatar_url} alt="user dp" className=" m-auto w-11/12 object-cover object-center rounded-lg shadow-md" />
 
         <div className="relative px-4 -mt-16 w-10/12 m-auto">
           <div className="bg-white p-6 rounded-lg shadow-lg">
