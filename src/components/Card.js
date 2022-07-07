@@ -3,12 +3,12 @@ import React from "react"
 
 const Card = ({ user }) => {
 
-  const createdDate = user?.created_at.substring(0, 10)
-  const updatedDate = user?.updated_at.substring(0, 10)
+  const createdDate = user?.created_at?.substring(0, 10)
+  const updatedDate = user?.updated_at?.substring(0, 10)
 
   return (
     <div className="">
-      <div className='w-4/12 m-auto flex align-center flex-col'>
+      <div className='w-4/12 m-auto flex align-center flex-col pt-5'>
         <img src={user?.avatar_url} alt="user image" className=" m-auto w-11/12 object-cover object-center rounded-lg shadow-md" />
 
         <div className="relative px-4 -mt-16 w-10/12 m-auto">
