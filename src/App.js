@@ -4,7 +4,7 @@ import Card from "./components/Card"
 
 const App = () => {
 
-  const [user, setUser] = useState()
+  const [user, setUser] = useState({})
   const [cardOpen, setCardOpen] = useState(false)
   const [userName, setUserName] = useState('')
 
@@ -20,8 +20,8 @@ const App = () => {
 
   const handleSearch = () => {
     fetchUser()
-    setCardOpen(true)
     setUserName('')
+    setCardOpen(true)
   }
 
 
@@ -45,7 +45,7 @@ const App = () => {
             dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
         </div>
       </div>
-      {cardOpen && user ? <Card user={user} /> : null}
+      {cardOpen && !user.message ? <Card user={user} /> : user.message ? user.message : null}
     </div >
   )
 };
